@@ -6,7 +6,6 @@ function App() {
     <div>
       <NavBar/>
       <TitleBody/>
-      <hello></hello>
     </div>
   );
 }
