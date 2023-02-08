@@ -1,15 +1,9 @@
-import NavBar from "./Components/NavBar";
-import TitleBody from "./Components/TitleBody";
-import BodyRibbon1 from "./Components/BodyRibbon1";
-import EventCreation from "./Pages/EventCreation";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <TitleBody/>
-      <BodyRibbon1/>
-      <EventCreation/>
+      <HomePage/>
     </div>
   );
 }
