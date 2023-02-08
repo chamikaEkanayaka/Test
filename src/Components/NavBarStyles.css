@@ -3,8 +3,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     background: #1A0328;
-    padding-left: 50px;
-    padding-right: 0px;
+    padding-left: 5%;
 }
 
 #NavBarEl{
@@ -15,7 +14,7 @@ nav{
 
 #NavBarEl li{
     list-style: none;
-    padding: 0px 50px;
+    padding: 0% 5%;
     position: relative; 
 }
 
