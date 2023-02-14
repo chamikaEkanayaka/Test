@@ -10,14 +10,15 @@
     align-items: center;
 }
 .TitleBodyEvem{
+    padding-top: 60px;
     font-weight: 800;
-    font-size: 150px;
+    font-size: 100px;
     color: #FFFFFF;    
 }
 .TitleBodyEventMan{
     position: absolute;
     left: calc(50% - 220px/2 - 0.5px);
-    top: 290px;
+    top: 250px;
     
     font-style: normal;
     font-weight: 800;
