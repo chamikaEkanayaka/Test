@@ -1,0 +1,170 @@
+body {
+    background-color: rgb(9, 18, 20);
+  }
+
+.GlryCvr{
+    position: absolute;
+    width: 100%;
+    top: 58px;
+}
+
+.CvrClrMx{
+    position: absolute;
+    width: 100%;
+    height: 107%;
+    top: 58px;
+
+    background: linear-gradient(180deg, #1A0328 5.49%, rgba(203, 28, 141, 0) 122.3%);
+}
+
+.WebNme{
+    position: absolute;
+    width: 530px;
+    height: 150px;
+    left: calc(50% - 430px/2 + 5px);
+    top: 150px;
+
+    font-family: 'Ek Mukta';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 130px;
+    line-height: 249px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.ScndP{
+    position: absolute;
+    width: 421px;
+    height: 22px;
+    left: calc(50% - 250px/2 + 5.5px);
+    top: 380px;
+
+    font-family: 'Big John and Slim Joe';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(182, 143, 185, 0.36);
+
+}
+
+.Rec_01{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 625px;
+    left: calc(50% - 141px/2 - 459.5px);
+    
+    border: 1px solid #FEFAFA;
+    border-radius: 30px;
+}
+
+.RecText_01{
+    position: absolute;
+    width: 121px;
+    height: 49px;
+    left: calc(50% - 100px/2 - 445px);
+    top: 598px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.Midlimg{
+    position: absolute;
+    width: 1150px;
+    height: 550px;
+    left: calc(50% - 1150px/2);
+    top: 737px;
+
+    background: #8C7199;
+    box-shadow: 0px -50px 100px 2px #1A0328, 0px 50px 100px 2px rgba(0, 0, 0, 0.65);
+}
+
+.MdlHr{
+    position: absolute;
+    width: 1130px;
+    height: 0px;
+    left: calc(50% - 1130px/2 + 4px);
+    top: 1350px;
+
+    border: 2px solid #D9D9D9;
+}
+
+.Fltrimg{
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    left: calc(50% - 40px/2 - 526px);
+    top: 1383px;
+
+    transform: rotate(-90deg);
+}
+
+.fltr{
+    position: absolute;
+    width: 254px;
+    height: 45px;
+    left: calc(50% - 254px/2 - 470px);
+    top: 1363px;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 26px;
+    /* or 72% */
+
+    text-align: center;
+
+    color: #AA9F9F;
+
+}
+
+.FltrBox{
+    position: absolute;
+    width: 1134px;
+    height: 450px;
+    left: calc(50% - 1134px/2 + 2px);
+    top: 1500px;
+
+    background: #D9D9D9;
+}
+
+.FtrImg{
+    position: absolute;
+    width: 1920px;
+    height: 246px;
+    left: calc(50% - 1920px/2 + 1873px);
+    top: 1000px;
+
+    transform: rotate(-180deg);
+}
+
+.FtrBg{
+    position: absolute;
+    width: 1440px;
+    height: 598px;
+    left: calc(50% - 1440px/2);
+    top: 4348px;
+
+    background: #1A0328;
+}
