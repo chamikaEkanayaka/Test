@@ -7,11 +7,6 @@ function HomePage() {
   return (
     <div>
       <NavBar/>
-      <TitleBody/>
-      <BodyRibbon1/>
-      <div class="br2r">increasing exposure.<br/>seamless planning.<br/>amazing event.</div>
-      <img class="rpng2" src={require("../Components/rpng2.png")} alt="rpng2"></img>
-      <img class="simage" src={require("../Components/simage.png")} alt="simage"></img>
     </div>
   );
 }
