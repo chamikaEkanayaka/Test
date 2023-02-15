@@ -1,6 +1,6 @@
-body {
+/*body {
     background-color: rgb(9, 18, 20);
-  }
+  }*/
 
 .GlryCvr{
     position: absolute;
@@ -22,9 +22,8 @@ body {
     width: 530px;
     height: 150px;
     left: calc(50% - 430px/2 + 5px);
-    top: 150px;
+    top: 140px;
 
-    font-family: 'Ek Mukta';
     font-style: normal;
     font-weight: 800;
     font-size: 130px;
@@ -43,11 +42,10 @@ body {
     left: calc(50% - 250px/2 + 5.5px);
     top: 380px;
 
-    font-family: 'Big John and Slim Joe';
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 20px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -109,15 +107,6 @@ body {
     border: 2px solid #D9D9D9;
 }
 
-.Fltrimg{
-    position: absolute;
-    width: 25px;
-    height: 30px;
-    left: calc(50% - 40px/2 - 526px);
-    top: 1383px;
-
-    transform: rotate(-90deg);
-}
 
 .fltr{
     position: absolute;
