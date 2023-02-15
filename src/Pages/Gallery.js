@@ -10,18 +10,12 @@ function Gallery(){
             <div class="CvrClrMx"></div>
             <p class="WebNme">EveM</p>
             <p class="ScndP">Event Management</p>
-            <div class="Rec_01"></div>
-            <p class="RecText_01">All</p>
-            <div class="Rec_02"></div>
-            <p class="RecText_02">All</p>
-            <div class="Rec_03"></div>
-            <p class="RecText_03">All</p>
-            <div class="Rec_04"></div>
-            <p class="RecText_04">All</p>
-            <div class="Rec_05"></div>
-            <p class="RecText_05">All</p>
-            <div class="Rec_06"></div>
-            <p class="RecText_06">All</p>
+            <button class="btn Rec_01">All</button>
+            <button class="btn Rec_02">Trip</button>
+            <button class="btn Rec_03">Charity</button>
+            <button class="btn Rec_04">Sports</button>
+            <button class="btn Rec_05">Festival</button>
+            <button class="btn Rec_06">Other</button>
             <div class="Midlimg"></div>
             <hr class="MdlHr"></hr>
             <img src={require("../Components/Filter.png")} alt="FilterImg" class="Fltrimg"></img>
