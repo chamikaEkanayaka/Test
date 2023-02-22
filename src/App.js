@@ -1,11 +1,9 @@
-import NavBar from "./Components/NavBar";
-import TitleBody from "./Components/TitleBody";
+import Gallery from "./Pages/Gallery";
 
 function App() {
   return (
     <div>
-      <NavBar/>
-      <TitleBody/>
+      <Gallery/>
     </div>
   );
 }
