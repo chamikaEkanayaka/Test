@@ -95,7 +95,7 @@
 .btn:hover{
     background-color: #7C24D3;
     border: 1px solid white;
-    transform: scale(1.2);
+    transform: scale(1.05);
     color: white;
 }
 
@@ -167,3 +167,13 @@
     top: 4348px;
     background: #1A0328;
 }
+
+.Filter{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 50px/2 - 526px);
+    top: 1682px;
+    transform: rotate(-90deg);
+}
+
