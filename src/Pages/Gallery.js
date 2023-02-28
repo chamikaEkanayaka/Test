@@ -18,7 +18,7 @@ function Gallery(){
             <button class="btn Rec_06">Other</button>
             <div class="Midlimg"></div>
             <hr class="MdlHr"></hr>
-            <img src={require("../Components/Filter.png")} alt="FilterImg" class="Fltrimg"></img>
+            <img src={require("../Components/Filter.png")} alt="FilterImage" class="Filter"></img>
             <p class="fltr">Filers</p>
             <div class="FltrBox"></div>
             <div class="FtrBg"></div>
