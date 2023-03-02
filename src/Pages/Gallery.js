@@ -19,9 +19,10 @@ function Gallery(){
             <div class="Midlimg"></div>
             <hr class="MdlHr"></hr>
             <img src={require("../Components/Filter.png")} alt="FilterImage" class="Filter"></img>
-            <p class="fltr">Filers</p>
+            <p class="fltr">Filters</p>
             <div class="FltrBox"></div>
-            <div class="FtrBg"></div>
+            <button class="AplFlt">Apply Filters</button>
+            
                        
         </>
     );

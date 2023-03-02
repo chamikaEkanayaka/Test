@@ -127,17 +127,23 @@
     height: 45px;
     left: calc(50% - 254px/2 - 470px);
     top: 1363px;
-
     font-family: 'Jost';
     font-style: normal;
     font-weight: 600;
     font-size: 25px;
     line-height: 72%;
-
     text-align: center;
-
     color: #AA9F9F;
 
+}
+
+.Filter{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    left: calc(50% - 50px/2 - 526px);
+    top: 1377px;
+    transform: rotate(-90deg);
 }
 
 .FltrBox{
@@ -150,30 +156,21 @@
     background: #D9D9D9;
 }
 
-.FtrImg{
-    position: absolute;
-    width: 1920px;
-    height: 246px;
-    left: calc(50% - 1920px/2 + 1873px);
-    top: 1500px;
 
-    transform: rotate(-180deg);
-}
-
-.FtrBg{
+.AplFlt{
     position: absolute;
-    width: 100%;
-    height: 598px;
-    top: 4348px;
-    background: #1A0328;
-}
-
-.Filter{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: calc(50% - 50px/2 - 526px);
-    top: 1682px;
-    transform: rotate(-90deg);
-}
+    width: 250px;
+    height: 45px;
+    left: calc(50% - 250px/2 + 288px);
+    top: 1900px;
+    background: rgba(26, 3, 40, 0.91);
+    border-radius: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    }
 
