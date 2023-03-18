@@ -62,7 +62,7 @@
     border: 1px solid #1A0328;
     border-radius: 30px;
     padding: 3px 45px;
-
+border:none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -71,6 +71,7 @@
     display: flex;
     text-align:center;
     color: #1A0328;
+    box-shadow: 2px 3px #843786 ;
 }
 
 .Rec_01{
@@ -94,9 +95,10 @@
 
 .btn:hover{
     background-color: #7C24D3;
-    border: 1px solid white;
+    border: none;
     transform: scale(1.05);
     color: white;
+    box-shadow: 1px 3px 10px grey ;
 }
 
 
@@ -172,5 +174,12 @@
     align-items: center;
     text-align: center;
     color: #FFFFFF;
-    }
+}
+
+.FltrBox{
+    position: absolute;
+    left: calc(50% - 40px/2 - 548px);
+    top: 1741px;
+}
+
 
