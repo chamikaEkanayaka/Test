@@ -1,8 +1,10 @@
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     background: #1A0328;
+    padding-left: 50px;
+    padding-right: 0px;
 }
 
 #NavBarEl{
@@ -12,13 +14,14 @@ nav{
 }
 
 #NavBarEl li{
-    padding: 0% 10%;
-    position: relative; 
     list-style: none;
+    padding: 0px 50px;
+    position: relative; 
 }
 
 #NavBarEl li a{
     text-decoration: none;
+    font-size: 17px;
     font-weight: 600;
     display: flex;
     color: #FFFFFF;
@@ -26,6 +29,10 @@ nav{
 }
 
 #NavBarEl li a:hover{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
     color: #eabcea;
 }
 
@@ -33,12 +40,15 @@ nav{
     width: 100px;
     height: 30px;
     padding-top: 0px;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
 }
 
 input.searchbar{
+    width: 190px;
+    height: 20px;
+    top: 22px;
     background: #D9D9D9;
     border-radius: 30px;
     font-size: 15px;

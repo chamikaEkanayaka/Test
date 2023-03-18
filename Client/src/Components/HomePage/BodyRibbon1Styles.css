@@ -1,7 +1,7 @@
 .br1s1{
     position: absolute;
-    width: 900px;
-    height: 300px;
+    width: 946px;
+    height: 353px;
     left: calc(50% - 946px/2 - 396px);
     top: 600px;
     background: #D9D9D9;
@@ -10,9 +10,9 @@
 .br1t1{
     position: absolute;
     width: 667px;
-    height: 210px;
-    padding-left: 50px;
-    top: 580px;
+    height: 222px;
+    left: calc(50% - 667px/2 - 299.5px);
+    top: 601px;
 
     font-style: normal;
     font-weight: 500;
@@ -27,7 +27,7 @@
     width: 235px;
     height: 55px;
     left: calc(50% - 235px/2 - 128.5px);
-    top: 790px;
+    top: 800px;
     background: #1A0328;
     border-radius: 30px;
 }
@@ -51,17 +51,4 @@
     height: 25px;
     left: 669px;
     top: 813px;
-}
-.br1i1{
-    position: absolute;
-    width: 445px;
-    height: 435px;
-    left: calc(50% - 445px/2 + 426.5px);
-    top: 525px;
-}
-
-.br1i1:hover{
-    transform: scale(1.1);
-    z-index: 1;
-    transition:500ms;
 }
