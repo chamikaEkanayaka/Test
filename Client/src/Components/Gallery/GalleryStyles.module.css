@@ -62,7 +62,7 @@
     border: 1px solid #1A0328;
     border-radius: 30px;
     padding: 3px 45px;
-border:none;
+    border:none;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
@@ -71,7 +71,7 @@ border:none;
     display: flex;
     text-align:center;
     color: #1A0328;
-    box-shadow: 2px 3px #843786 ;
+    box-shadow: 1px 2px 5px #a459a7 ;
 }
 
 .Rec_01{
@@ -98,7 +98,7 @@ border:none;
     border: none;
     transform: scale(1.05);
     color: white;
-    box-shadow: 1px 3px 10px grey ;
+    box-shadow: 1px 2px 5px grey ;
 }
 
 
@@ -164,7 +164,7 @@ border:none;
     width: 250px;
     height: 45px;
     left: calc(50% - 250px/2 + 288px);
-    top: 1900px;
+    top: 2100px;
     background: rgba(26, 3, 40, 0.91);
     border-radius: 20px;
     font-style: normal;

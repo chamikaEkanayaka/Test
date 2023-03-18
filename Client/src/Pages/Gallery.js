@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "../Components/Gallery/GalleryStyles.module.css";
+import { BiSlider } from "react-icons/bi";
+
 
 
 function Gallery(){
@@ -17,11 +19,12 @@ function Gallery(){
             <button class={`${styles.btn} ${styles.Rec_06}`}>Other</button>
             <div class={styles.Midlimg}></div>
             <hr class={styles.MdlHr}></hr>
-            <img src={require("../Images/Filter.png")} alt="FilterImage" class={styles.Filter}></img>
+            {/* <img src={require("../Images/Filter.png")} alt="FilterImage" class={styles.Filter}></img> */}
+            <BiSlider class={styles.Filter}/>
             <p class={styles.fltr}>Filters</p>
+
             <div class={styles.FltrBox}></div>
             <button class={styles.AplFlt}>Apply Filters</button>
-            
                        
         </>
     );
