@@ -16,6 +16,7 @@ import {createBrowserRouter,createRoutesFromElements,Route,Link,RouterProvider,O
 import NavBar from './Components/Common/NavBar';
 import HomePage from "./Pages/HomePage"
 import Gallery from "./Pages/Gallery";
+import CreateEvent from './Pages/CreateEvent';
 
 
 
@@ -27,6 +28,7 @@ export default function App() {
               <Route path="/" element={<Root/>}>
                   <Route path="/home" element={<HomePage/>}/>
                   <Route path="/gallery" element={<Gallery/>}/>
+                  <Route path="/createevent" element={<CreateEvent/>}/>
               </Route>
             </>
             
