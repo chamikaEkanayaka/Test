@@ -1,5 +1,5 @@
 import React from "react";
-import "../Common/FooterRibbon.css";
+import "../Common/FooterRibbonStyles.css";
 
 function FooterRibbon(){
     return(
@@ -14,13 +14,13 @@ function FooterRibbon(){
                     <p class="frbid">Subscribe to receive new updates,<br/> be the know about our events, and<br/> more.</p>
                 </div>
                 <div class="frbi">
-                    <img src={require("../Components/ifsevemlogo.png")} alt="ifsevemlogo"></img>
+                    <img src={require("../../Images/ifsevemlogo.png")} alt="ifsevemlogo"></img>
                 </div>
             </div>
             <div class="frb2">
-                <img src={require("../Components/socialmediaiconsimg.png")} alt="socialmediaiconsimg" class="frb2smii"></img>
+                <img src={require("../../Images/socialmediaiconsimg.png")} alt="socialmediaiconsimg" class="frb2smii"></img>
                 <p class="frb2c">© 2023, EveM. Powered by Matrix</p>
-                <img src={require("../Components/paymentmethodsiconsimg.png")} alt="paymentmethodsiconsimg" class="frb2pmii"></img>
+                <img src={require("../../Images/paymentmethodsiconsimg.png")} alt="paymentmethodsiconsimg" class="frb2pmii"></img>
             </div>
         </>
     );

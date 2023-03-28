@@ -22,7 +22,7 @@
     height: 243px;
     top: 1446px;
 
-    background: url("../Components/rpng3.png");
+    background: url("../../Images/rpng3.png");
 }
 
 .br1el{
@@ -49,7 +49,7 @@
     height: 500px;
     left: calc(50% - 553px/2 - 150.5px);
     top: 2478px;
-    background: url("../Components/evAwri.png");
+    background: url("../../Images/evAwri.png");
 }
 
 .evAwrb2{

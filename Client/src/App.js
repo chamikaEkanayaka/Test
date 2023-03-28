@@ -44,9 +44,8 @@ export default function App() {
 const Root=()=>{
     return(
         <>
-        <NavBar/>
+        {/* <NavBar/> */}
         <div><Outlet/></div>
         </>
     )
 }
-
