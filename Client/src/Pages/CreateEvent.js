@@ -1,11 +1,12 @@
 import React from "react";
-import NavBar from "../Components/Common/NavBar";
+import CommitteeRibbon from "../Components/Common/CommitteeRibbon";
+import EventCreationForm from "../Components/CreateEvent/EventCreateForm";
 
 function CreateEvent(){
     return(
         <>
-            <NavBar/>
-            <h1>hello</h1>
+            <CommitteeRibbon/>
+            <EventCreationForm/>
         </>
     )
 }

@@ -1,0 +1,68 @@
+.evfbackground{
+    background-color: #CDC4D3;
+    width: 100%;
+    height: 200vh;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.evfs{
+    padding-left: 10px;
+    padding-top: 10px;
+    width: 50%;
+    height: 200vh;
+    background-color: #c4baca;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inah{
+    display: flex;
+    padding-top: 20px;
+}
+
+.inad{
+    padding-left: 20px;
+}
+
+.basicinfologo{
+    font-size: 50px;
+    color: #565656;
+}
+
+.inatbte{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 0%;
+    padding-left: 10px;
+}
+
+.inat{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.evTitlet{
+    width: 90%;
+    height: 5vh;
+}
+
+.evDescpt{
+    width: 90%;
+    height: 20vh;
+}
+
+.evTitlet::placeholder{
+    position: relative;
+    padding-top: 0;
+}
+
+.evTypet{
+    font-size: 100px;
+}
+
+.tyst{
+    line-height: 30px;
+    font-weight: 500;
+}
