@@ -25,9 +25,9 @@
     padding-left: 20px;
 }
 
-.basicinfologo{
+.formlogo{
     font-size: 50px;
-    color: #565656;
+    color: #6c6c6cac;
 }
 
 .inatbte{
@@ -65,4 +65,146 @@
 .tyst{
     line-height: 30px;
     font-weight: 500;
+}
+
+.evImaget{
+    position:relative;
+    display:inline-block;    
+    border-radius:8px;
+    border:#ebebeb solid 1px;
+    width:250px; 
+    padding: 4px 6px 4px 8px;
+    font: normal 14px Myriad Pro, Verdana, Geneva, sans-serif;
+    color: #7f7f7f;
+    margin-top: 2px;
+    background:white
+}
+
+.recsin{
+    display: flex;
+    justify-content: center;
+}
+
+.recsinl{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.recsinr{
+    width: 30px;
+}
+
+
+
+
+.rsradio1{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}  
+
+.defr1{
+    display: none;
+}
+
+.recsinr1{
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.recsinr1::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #490253;
+    border-radius: 50%;
+  
+    transform: scale(0);
+}
+
+.defr1:checked + .recsinr1::after{
+    transform: scale(1);
+    transition: 0.30s;
+}
+
+.rsradio2{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.defr2{
+    display: none;
+}
+
+.recsinr2{
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #d8e4e2;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.recsinr2::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #490253;
+    border-radius: 50%;
+  
+    transform: scale(0);
+}
+
+.defr2:checked + .recsinr2::after{
+    transform: scale(1);
+    transition: 0.30s;
+}
+
+.recsinvn{
+    font-size: 15px;
+    font-weight: 800;
+    color: #510568;
+}
+
+.stenDate, .stenTime{
+    width: 35%;
+    height: 5vh;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.stenDtae::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type="date"],input[type="time"]{
+    background-color: #510568;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
 }
