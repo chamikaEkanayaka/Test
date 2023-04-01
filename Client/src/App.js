@@ -20,7 +20,6 @@ import CreateEvent from './Pages/CreateEvent';
 
 
 
-
 export default function App() {
     const router=createBrowserRouter(
         createRoutesFromElements( 

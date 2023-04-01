@@ -43,7 +43,7 @@
     padding-bottom: 10px;
 }
 
-.evTitlet{
+.evTitlet, .locTitle{
     width: 90%;
     height: 5vh;
 }
@@ -207,4 +207,8 @@ input[type="date"],input[type="time"]{
     padding: 5px;
     cursor: pointer;
     border-radius: 3px;
+}
+
+.locTitle{
+    color: #490253;
 }

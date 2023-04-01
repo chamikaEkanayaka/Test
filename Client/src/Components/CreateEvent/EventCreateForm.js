@@ -92,7 +92,7 @@ function EventCreationForm(){
                             <p>Help people in the area discover your event and let attendees know where to show up.</p>
                         </div>
                         <div class="inat">
-                            <input type="file" name="evImage" class="evImaget"/>
+                            <input type="text" name="evImage" class="locTitle"/>
                         </div>
 
                     </form>
