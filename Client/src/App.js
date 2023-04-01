@@ -13,7 +13,6 @@
 
 import {React} from 'react'
 import {createBrowserRouter,createRoutesFromElements,Route,Link,RouterProvider,Outlet} from "react-router-dom";
-import NavBar from './Components/Common/NavBar';
 import HomePage from "./Pages/HomePage"
 import Gallery from "./Pages/Gallery";
 import CreateEvent from './Pages/CreateEvent';
