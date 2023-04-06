@@ -1,0 +1,43 @@
+.placeSearchContent{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.suggestPlaces{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectedPlace{
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+    padding-left: 2%;
+    color: #1f1f1f;
+}
+
+#place-search-input{
+    color: #490253;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.optionKey{
+    background-color: #510568;
+    color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.clearLocationButton{
+    padding: 10px;
+    background-color: #510568;
+    color: #ffffff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
