@@ -1,11 +1,14 @@
 import React from "react";
 import "../CreateEvent/EventCreateFormStyles.css";
 import PlaceSearchInput from "./PlaceSearchInput";
+import NamedFileUpload from "./NamedFileUpload";
+import NameInput from "./NameInput";
 import { HiCollection } from "react-icons/hi";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import { TbCalendarStats } from "react-icons/tb";
 import { CiLocationOn } from "react-icons/ci";
 import { IoDocumentsSharp } from "react-icons/io5";
+import { BsFillPersonFill } from "react-icons/bs";
 
 
 function EventCreationForm(){
@@ -121,7 +124,19 @@ function EventCreationForm(){
                             <p>Help people in the area discover your event and let attendees know where to show up.</p>
                         </div>
                         <div class="inat">
-                            <input type="file" name="evImage" class="evImaget"/>
+                            <NamedFileUpload/>
+                        </div>
+
+
+                        <div class="inah">
+                            <BsFillPersonFill class="formlogo"/>
+                            <p class="inatbte">Add committee members</p>
+                        </div>
+                        <div class="inad">
+                            <p>Help people in the area discover your event and let attendees know where to show up.</p>
+                        </div>
+                        <div class="inat">
+                            <NameInput/>
                         </div>
 
 
