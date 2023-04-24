@@ -3,6 +3,7 @@ import "../CreateEvent/EventCreateFormStyles.css";
 import PlaceSearchInput from "./PlaceSearchInput";
 import NamedFileUpload from "./NamedFileUpload";
 import NameInput from "./NameInput";
+import FooterRibbon from "../Common/FooterRibbon";
 import { HiCollection } from "react-icons/hi";
 import { MdAddPhotoAlternate } from "react-icons/md";
 import { TbCalendarStats } from "react-icons/tb";
@@ -138,10 +139,12 @@ function EventCreationForm(){
                         <div class="inat">
                             <NameInput/>
                         </div>
-
-
+                        <div class="inSbDiv">
+                            <input type="submit" value="Create Event" class="sbmtFrmBtn"/>
+                        </div>
                     </form>
                 </div>
+                <FooterRibbon/>
             </div>
         </>
     )
