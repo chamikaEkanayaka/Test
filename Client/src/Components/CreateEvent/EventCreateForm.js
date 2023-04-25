@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../CreateEvent/EventCreateFormStyles.css";
 import PlaceSearchInput from "./PlaceSearchInput";
 import NamedFileUpload from "./NamedFileUpload";
@@ -10,141 +10,233 @@ import { TbCalendarStats } from "react-icons/tb";
 import { CiLocationOn } from "react-icons/ci";
 import { IoDocumentsSharp } from "react-icons/io5";
 import { BsFillPersonFill } from "react-icons/bs";
+import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
 
+function EventCreationForm() {
+    const [selectedPlaces, setSelectedPlaces] = useState([]);
+    const [namesList, setNamesList] = useState([]);
 
-function EventCreationForm(){
-    return(
+    const [title, setTitle] = useState('');
+    const [desc, setDesc] = useState('');
+    const [type, setType] = useState('trip');
+    const [image, setImage] = useState(null);
+    const [startDate, setStartDate] = useState(null);
+    const [startTime, setStartTime] = useState('');
+    const [endDate, setEndDate] = useState(null);
+    const [endTime, setEndTime] = useState('');
+    const [locationType, setLocationType] = useState('physical');
+    const [additionalDoc, setAdditionalDoc] = useState(null);
+
+    // const initialValues = {
+    //     evtTitle: '',
+    //     evtDescription: '',
+    //     evtType: '',
+    //     evtImage: '',
+    //     startDate: Date.now,
+    //     startTime: '',
+    //     endDate: Date.now,
+    //     endTime: '',
+    //     locationType: 'physical',
+    //     locations: [],
+    //     additionalDoc: '',
+    //     commityMembers: []
+    // };
+
+    // const validationSchema = Yup.object().shape({
+    //     evtTitle: Yup.string().required('Event Title is Required'),
+    //     evtDescription: Yup.string().required('Event Description is Required'),
+    //     evtType: Yup.string().required('Event Type is Required'),
+    //     startDate: Yup.date(),
+    //     startTime: Yup.date(),
+    //     endDate: Yup.date(),
+    //     endTime: Yup.date()
+    // });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const data = {
+            evTitle: title,
+            evDescription: desc,
+            mainImgPth: "https://example.com/image.jpg",
+            recSinEvnt: "Recurring",
+            stDateTime: startTime,
+            enDateTime: endTime,
+            phyOnlEvt: locationType,
+            location: selectedPlaces,
+            dcmtPth: "https://example.com/documents",
+            cmteMbr: namesList
+              
+            // title,
+            // desc,
+            // type,
+            // image,
+            // startDate,
+            // startTime,
+            // endDate,
+            // endTime,
+            // locationType,
+            // selectedPlaces,
+            // additionalDoc,
+            // namesList
+        };
+
+        fetch('https://localhost:7023/api/Todo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        }).then(res => {
+            if (res.status === 200) {
+                alert("Success...!");
+            }
+        }).catch(err => console.log(err));
+
+        console.log(data);
+    };
+
+    return (
         <>
-            <div class="evfbackground">
-                <div class="evfs">
-                    <form>
-                        <div class="inah">
-                            <HiCollection class="formlogo"/>
-                            <p class="inatbte">Basic Info</p>
+            <div className="evfbackground">
+                <div className="evfs">
+                    {/* <Formik
+                        initialValues={initialValues}
+                        validationSchema={validationSchema}
+                        onSubmit={handleSubmit}
+                    >
+                        {(props) => ( */}
+                    <form onSubmit={(e) => handleSubmit(e)}>
+                        <div className="inah">
+                            <HiCollection className="formlogo" />
+                            <p className="inatbte">Basic Info</p>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>
                                 Name your event and tell event-goers why they should come.
                                 Add details that highlight what makes it unique.
                             </p>
                         </div>
-                        <div class="inat">
-                            <input type="text" name="evTitle" class="evTitlet" placeholder="Event Title"></input>
+                        <div className="inat">
+                            <input type="text" name="evtTitle" className="evTitlet" placeholder="Event Title" value={title} onChange={(e) => setTitle(e.target.value)} />
                         </div>
-                        <div class="inat">
-                            <input type="textarea" name="evDescp" class="evDescpt" placeholder="Event Description"></input>
+                        <div className="inat">
+                            <input type="textarea" name="evtDescription" className="evDescpt" placeholder="Event Description" value={desc} onChange={(e) => setDesc(e.target.value)} />
                         </div>
-                        <div class="inat">
-                            <div class="tyst">Type :&nbsp;&nbsp;</div>
-                            <div class="tyss">
-                                <select name="evType" class="evTypet">
-                                    <option value="Trip">Trip</option>
-                                    <option value="Charity">Charity</option>
-                                    <option value="Sports">Sports</option>
-                                    <option value="Festival">Festival</option>
-                                    <option value="Other">Other</option>
+                        <div className="inat">
+                            <div className="tyst">Type :&nbsp;&nbsp;</div>
+                            <div className="tyss">
+                                <select name="evtType" className="evTypet" value={type} onChange={(e) => setType(e.target.value)} >
+                                    <option value="trip">Trip</option>
+                                    <option value="charity">Charity</option>
+                                    <option value="sports">Sports</option>
+                                    <option value="festival">Festival</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                         </div>
 
 
-                        <div class="inah">
-                            <MdAddPhotoAlternate class="formlogo"/>
-                            <p class="inatbte">Main Event Image</p>
+                        <div className="inah">
+                            <MdAddPhotoAlternate className="formlogo" />
+                            <p className="inatbte">Main Event Image</p>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>This is the first image attendees will see at the top of your listing.</p>
                         </div>
-                        <div class="inat">
-                            <input type="file" name="evImage" class="evImaget"/>
+                        <div className="inat">
+                            <input type="file" name="evtImage" className="evImaget" />
                         </div>
 
-                        <div class="inah">
-                            <TbCalendarStats class="formlogo"/>
-                            <p class="inatbte">Date and time</p>
+                        <div className="inah">
+                            <TbCalendarStats className="formlogo" />
+                            <p className="inatbte">Date and time</p>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>Tell event-goers when your event starts and ends so they can make plans to attend.</p>
                         </div>
-                        <div class="inat">
-                            <label for="myRadioId1" class="rsradio1">
-                                <input type="radio" name="recsin" class="defr1" id="myRadioId1" value="rec"/>
-                                <div class="recsinr1"></div>
-                                <div class="recsinvn">Reccurent Event</div>
+                        <div className="inat">
+                            <label for="myRadioId1" className="rsradio1">
+                                <input type="radio" name="recsin" className="defr1" id="myRadioId1" value="rec" />
+                                <div className="recsinr1"></div>
+                                <div className="recsinvn">Reccurent Event</div>
                             </label>
-                            <label for="myRadioId2" class="rsradio2">
-                                <input type="radio" name="recsin" class="defr2" id="myRadioId2" value="sin" checked/>
-                                <div class="recsinr2"></div>
-                                <div class="recsinvn">Single Event</div>
+                            <label for="myRadioId2" className="rsradio2">
+                                <input type="radio" name="recsin" className="defr2" id="myRadioId2" value="sin" checked />
+                                <div className="recsinr2"></div>
+                                <div className="recsinvn">Single Event</div>
                             </label>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>Single event happens once and can last multiple days.</p>
                         </div>
-                        <div class="inat">
+                        <div className="inat">
                             <h4>Start</h4>
-                            <input type="date" name="evImage" class="stenDate"/>
-                            <input type="time" name="evImage" class="stenTime"/>
+                            <input type="date" name="evImage" className="stenDate" onChange={(e) => setStartDate(e.target.value)} value={startDate} />
+                            <input type="time" name="evImage" className="stenTime" onChange={(e) => setStartTime(e.target.value)} value={startTime} />
                         </div>
-                        <div class="inat">
-                            <h4>Ends</h4> 
-                            <input type="date" name="evImage" class="stenDate"/>
-                            <input type="time" name="evImage" class="stenTime"/>
+                        <div className="inat">
+                            <h4>Ends</h4>
+                            <input type="date" name="evImage" className="stenDate" onChange={(e) => setEndDate(e.target.value)} value={endDate} />
+                            <input type="time" name="evImage" className="stenTime" onChange={(e) => setEndTime(e.target.value)} value={endTime} />
                         </div>
 
-                        <div class="inah">
-                            <CiLocationOn class="formlogo"/>
-                            <p class="inatbte">Location</p>
+                        <div className="inah">
+                            <CiLocationOn className="formlogo" />
+                            <p className="inatbte">Location</p>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>Help people in the area discover your event and let attendees know where to show up.</p>
                         </div>
 
-                        <div class="inat">
-                            <label for="myRadioId1eV" class="rsradio1eV">
-                                <input type="radio" name="evVenue" class="defr1eV" id="myRadioId1eV" value="Online"/>
-                                <div class="recsinr1eV"></div>
-                                <div class="recsinvneV">Online Event</div>
+                        <div className="inat">
+                            <label for="myRadioId1eV" className="rsradio1eV">
+                                <input type="radio" name="evVenue" className="defr1eV" id="myRadioId1eV" value="Online" onChange={(e) => setLocationType(e.target.value)} />
+                                <div className="recsinr1eV"></div>
+                                <div className="recsinvneV">Online Event</div>
                             </label>
-                            <label for="myRadioId2eV" class="rsradio2eV">
-                                <input type="radio" name="evVenue" class="defr2eV" id="myRadioId2eV" value="Physical" checked/>
-                                <div class="recsinr2eV"></div>
-                                <div class="recsinvneV">Physical Event</div>
+                            <label for="myRadioId2eV" className="rsradio2eV">
+                                <input type="radio" name="evVenue" className="defr2eV" id="myRadioId2eV" value="Physical" checked onChange={(e) => setLocationType(e.target.value)} />
+                                <div className="recsinr2eV"></div>
+                                <div className="recsinvneV">Physical Event</div>
                             </label>
-                        </div>                        
+                        </div>
                         <div>
-                            <PlaceSearchInput/>
+                            <PlaceSearchInput selectedPlaces={selectedPlaces} setSelectedPlaces={setSelectedPlaces} />
                         </div>
 
 
-                        <div class="inah">
-                            <IoDocumentsSharp class="formlogo"/>
-                            <p class="inatbte">Additional Documents</p>
+                        <div className="inah">
+                            <IoDocumentsSharp className="formlogo" />
+                            <p className="inatbte">Additional Documents</p>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>Help people in the area discover your event and let attendees know where to show up.</p>
                         </div>
-                        <div class="inat">
-                            <NamedFileUpload/>
+                        <div className="inat">
+                            <NamedFileUpload />
                         </div>
 
 
-                        <div class="inah">
-                            <BsFillPersonFill class="formlogo"/>
-                            <p class="inatbte">Add committee members</p>
+                        <div className="inah">
+                            <BsFillPersonFill className="formlogo" />
+                            <p className="inatbte">Add committee members</p>
                         </div>
-                        <div class="inad">
+                        <div className="inad">
                             <p>Help people in the area discover your event and let attendees know where to show up.</p>
                         </div>
-                        <div class="inat">
-                            <NameInput/>
+                        <div className="inat">
+                            <NameInput namesList={namesList} setNamesList={setNamesList} />
                         </div>
-                        <div class="inSbDiv">
-                            <input type="submit" value="Create Event" class="sbmtFrmBtn"/>
+                        <div className="inSbDiv">
+                            <input type="submit" value="Create Event" className="sbmtFrmBtn" />
                         </div>
                     </form>
+                    {/* )}
+                     </Formik> */}
                 </div>
-                <FooterRibbon/>
+                <FooterRibbon />
             </div>
         </>
     )

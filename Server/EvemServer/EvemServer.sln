@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvemServer", "EvemServer\EvemServer.csproj", "{AED5DA62-3A17-4A50-9DEE-153F7B93A3FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AED5DA62-3A17-4A50-9DEE-153F7B93A3FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED5DA62-3A17-4A50-9DEE-153F7B93A3FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED5DA62-3A17-4A50-9DEE-153F7B93A3FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED5DA62-3A17-4A50-9DEE-153F7B93A3FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8A53BAC-00CC-488E-BF0D-2B8DD31EB0BD}
+	EndGlobalSection
+EndGlobal

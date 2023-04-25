@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./PlaceSearchInput.css";
 
-function PlaceSearchInput({ apiKey }) {
+function PlaceSearchInput(props) {
+  const {
+    selectedPlaces,
+    setSelectedPlaces,
+    apiKey
+  } = props;
+
   const [query, setQuery] = useState("");
   const [predictions, setPredictions] = useState([]);
-  const [selectedPlaces, setSelectedPlaces] = useState([]);
 
   useEffect(() => {
     const googleMapsScript = document.createElement("script");

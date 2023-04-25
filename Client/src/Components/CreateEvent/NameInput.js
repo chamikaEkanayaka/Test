@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import "../CreateEvent/NameInput.css";
 
-function NameInput() {
+function NameInput(props) {
+  const {
+    namesList,
+    setNamesList
+  } = props;
+
   const [name, setName] = useState('');
-  const [namesList, setNamesList] = useState([]);
 
   function handleNameInputChange(event) {
     setName(event.target.value);
