@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "../CreateEvent/EventCreateFormStyles.css";
 import PlaceSearchInput from "./PlaceSearchInput";
 import NamedFileUpload from "./NamedFileUpload";
@@ -14,89 +13,6 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 
 function EventCreationForm() {
-    const [selectedPlaces, setSelectedPlaces] = useState([]);
-    const [namesList, setNamesList] = useState([]);
-
-    const [title, setTitle] = useState('');
-    const [desc, setDesc] = useState('');
-    const [type, setType] = useState('trip');
-    const [image, setImage] = useState(null);
-    const [startDate, setStartDate] = useState(null);
-    const [startTime, setStartTime] = useState('');
-    const [endDate, setEndDate] = useState(null);
-    const [endTime, setEndTime] = useState('');
-    const [locationType, setLocationType] = useState('physical');
-    const [additionalDoc, setAdditionalDoc] = useState(null);
-
-    // const initialValues = {
-    //     evtTitle: '',
-    //     evtDescription: '',
-    //     evtType: '',
-    //     evtImage: '',
-    //     startDate: Date.now,
-    //     startTime: '',
-    //     endDate: Date.now,
-    //     endTime: '',
-    //     locationType: 'physical',
-    //     locations: [],
-    //     additionalDoc: '',
-    //     commityMembers: []
-    // };
-
-    // const validationSchema = Yup.object().shape({
-    //     evtTitle: Yup.string().required('Event Title is Required'),
-    //     evtDescription: Yup.string().required('Event Description is Required'),
-    //     evtType: Yup.string().required('Event Type is Required'),
-    //     startDate: Yup.date(),
-    //     startTime: Yup.date(),
-    //     endDate: Yup.date(),
-    //     endTime: Yup.date()
-    // });
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-
-        const data = {
-            evTitle: title,
-            evDescription: desc,
-            mainImgPth: "https://example.com/image.jpg",
-            recSinEvnt: "Recurring",
-            stDateTime: startTime,
-            enDateTime: endTime,
-            phyOnlEvt: locationType,
-            location: selectedPlaces,
-            dcmtPth: "https://example.com/documents",
-            cmteMbr: namesList
-              
-            // title,
-            // desc,
-            // type,
-            // image,
-            // startDate,
-            // startTime,
-            // endDate,
-            // endTime,
-            // locationType,
-            // selectedPlaces,
-            // additionalDoc,
-            // namesList
-        };
-
-        fetch('https://localhost:7023/api/Todo', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        }).then(res => {
-            if (res.status === 200) {
-                alert("Success...!");
-            }
-        }).catch(err => console.log(err));
-
-        console.log(data);
-    };
-
     return (
         <>
             <div className="evfbackground">
